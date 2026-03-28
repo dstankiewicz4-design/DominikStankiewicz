@@ -524,16 +524,7 @@
       color: var(--muted);
     }
 
-    .reveal {
-      opacity: 1;
-      transform: translateY(0);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    
 
     @media (max-width: 1080px) {
       .hero-card,
@@ -605,7 +596,7 @@
   <main>
     <section class="hero" id="start">
       <div class="container">
-        <div class="hero-card reveal">
+        <div class="$1$2">
           <div>
             <div class="hero-badge">● nowoczesna wizytówka online</div>
             <h1><span>Dominik</span><span>Stankiewicz</span></h1>
@@ -667,7 +658,7 @@
 
     <section id="o-mnie">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="$1$2">
           <div class="section-icon">👋</div>
           <div>
             <h2>O mnie</h2>
@@ -676,7 +667,7 @@
         </div>
 
         <div class="about-grid">
-          <div class="about-card reveal">
+          <div class="$1$2">
             <div class="about-text">
               <p>
                 Jestem osobą wszechstronną, dobrze odnajdującą się zarówno w pracy operacyjnej, jak i biurowej. Na co dzień cenię organizację zadań, samodzielność oraz skuteczne rozwiązywanie problemów.
@@ -690,7 +681,7 @@
             </div>
           </div>
 
-          <div class="about-card reveal">
+          <div class="$1$2"eveal">
             <div class="quick-facts">
               <div class="fact">
                 <div class="icon">🎓</div>
@@ -712,7 +703,7 @@
 
     <section>
       <div class="container">
-        <div class="section-head reveal">
+       class="$1$2"eveal">
           <div class="section-icon">🛠</div>
           <div>
             <h2>Umiejętności</h2>
@@ -720,7 +711,7 @@
           </div>
         </div>
 
-        <div class="skills-card reveal">
+      eveal">
           <div class="skills-grid">
             <div class="skill-item">
               <div class="icon">✍</div>
@@ -904,9 +895,6 @@
   </footer>
 
   <script>
-    const elements = document.querySelectorAll('.reveal');
-    elements.forEach((el) => el.classList.add('visible'));
-
     document.getElementById('contactForm').addEventListener('submit', function (e) {
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
@@ -915,13 +903,9 @@
 
       const subject = encodeURIComponent('Wiadomość ze strony personalnej');
       const body = encodeURIComponent(
-        'Imię: ' + name + '
-' +
-        'Email: ' + email + '
-
-' +
-        'Wiadomość:
-' + message
+        'Imię: ' + name + '\n' +
+        'Email: ' + email + '\n\n' +
+        'Wiadomość:\n' + message
       );
 
       window.location.href = 'mailto:dominikstankiewicz42@gmail.com?subject=' + subject + '&body=' + body;
