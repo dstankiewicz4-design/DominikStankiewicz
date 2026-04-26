@@ -603,7 +603,6 @@
             <p class="hero-subtitle">
               Student dziennikarstwa i komunikacji społecznej, osoba zorganizowana, kreatywna i dobrze odnajdująca się w dynamicznym środowisku. Łączę estetykę, komunikację i praktyczne podejście do działania.
             </p>
-            <div class="quote">„Zapierdalasz albo wypierdalasz.”</div>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#kontakt">✉ Napisz do mnie</a>
               <a class="btn btn-secondary" href="#projekty">↓ Zobacz więcej</a>
@@ -642,11 +641,6 @@
                 </div>
               </div>
             </div>
-
-            <div class="panel">
-              <div class="panel-title">✨ W skrócie</div>
-              <div class="mini-list">
-                <div class="mini-item"><div class="icon">01</div><div>Wszechstronność w zadaniach operacyjnych i organizacyjnych.</div></div>
                 <div class="mini-item"><div class="icon">02</div><div>Zainteresowanie analizą zjawisk w sieci oraz produkcją muzyczną.</div></div>
                 <div class="mini-item"><div class="icon">03</div><div>Naturalne nastawienie na działanie, samodzielność i szukanie rozwiązań.</div></div>
               </div>
@@ -662,7 +656,6 @@
           <div class="section-icon">👋</div>
           <div>
             <h2>O mnie</h2>
-            <p>Najważniejsze informacje w krótkiej, konkretnej formie.</p>
           </div>
         </div>
 
@@ -681,7 +674,7 @@
             </div>
           </div>
 
-          <div class="$1$2"eveal">
+          <div class="$1$2">
             <div class="quick-facts">
               <div class="fact">
                 <div class="icon">🎓</div>
@@ -703,15 +696,14 @@
 
     <section>
       <div class="container">
-       class="$1$2"eveal">
+        <div class="$1$2">
           <div class="section-icon">🛠</div>
           <div>
             <h2>Umiejętności</h2>
-            <p>Połączenie kompetencji organizacyjnych, komunikacyjnych i praktycznych.</p>
           </div>
         </div>
 
-      eveal">
+        <div class="$1$2">
           <div class="skills-grid">
             <div class="skill-item">
               <div class="icon">✍</div>
@@ -762,16 +754,15 @@
 
     <section id="projekty">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="$1$2">
           <div class="section-icon">📁</div>
           <div>
             <h2>Projekty i doświadczenie</h2>
-            <p>Zebrane najważniejsze obszary działania zamiast klasycznego portfolio.</p>
           </div>
         </div>
 
         <div class="projects-grid">
-          <article class="project-card reveal">
+          <article class="$1$2">
             <div class="project-tag">Doświadczenie</div>
             <h3>EVORENT sp. z o.o. — Wrocław</h3>
             <p>Koordynacja działań operacyjnych i wsparcie bieżącej obsługi firmy.</p>
@@ -783,7 +774,7 @@
             </ul>
           </article>
 
-          <article class="project-card reveal">
+          <article class="$1$2">
             <div class="project-tag">Doświadczenie</div>
             <h3>@KOM — Warszawa</h3>
             <p>Sprzedaż, doradztwo i kontakt z klientem w środowisku handlowym.</p>
@@ -795,7 +786,7 @@
             </ul>
           </article>
 
-          <article class="project-card reveal">
+          <article class="$1$2">
             <div class="project-tag">Projekt</div>
             <h3>Strona personalna</h3>
             <p>Nowoczesna wizytówka online przygotowana jako projekt na zajęcia akademickie.</p>
@@ -811,16 +802,15 @@
 
     <section id="kontakt">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="$1$2">
           <div class="section-icon">✉</div>
           <div>
             <h2>Kontakt</h2>
-            <p>Najprostsza droga do kontaktu i szybka wiadomość bezpośrednio z poziomu strony.</p>
           </div>
         </div>
 
         <div class="contact-grid">
-          <div class="contact-card reveal">
+          <div class="$1$2">
             <p>
               Jeśli chcesz się ze mną skontaktować, najlepiej napisz wiadomość mailową albo odezwij się przez profil zawodowy. Poniżej zostawiam najważniejsze dane kontaktowe.
             </p>
@@ -862,7 +852,7 @@
             </div>
           </div>
 
-          <div class="form-card reveal">
+          <div class="$1$2">
             <p>Napisz wiadomość — po kliknięciu przycisku otworzy się Twój program pocztowy z gotową treścią.</p>
             <form id="contactForm">
               <div>
@@ -903,9 +893,13 @@
 
       const subject = encodeURIComponent('Wiadomość ze strony personalnej');
       const body = encodeURIComponent(
-        'Imię: ' + name + '\n' +
-        'Email: ' + email + '\n\n' +
-        'Wiadomość:\n' + message
+        'Imię: ' + name + '
+' +
+        'Email: ' + email + '
+
+' +
+        'Wiadomość:
+' + message
       );
 
       window.location.href = 'mailto:dominikstankiewicz42@gmail.com?subject=' + subject + '&body=' + body;
