@@ -7,19 +7,22 @@
   <meta name="description" content="Nowoczesna strona personalna Dominika Stankiewicza — wizytówka online." />
   <style>
     :root {
-      --bg: #f6fbff;
-      --bg-soft: #eef7ff;
-      --card: rgba(255, 255, 255, 0.78);
-      --text: #111827;
-      --muted: #5b6472;
-      --line: rgba(17, 24, 39, 0.08);
-      --accent: #93c5fd;
-      --accent-strong: #60a5fa;
-      --accent-deep: #2563eb;
-      --shadow: 0 20px 60px rgba(37, 99, 235, 0.10);
+      --bg: #f7f9fc;
+      --bg-soft: #eef4fb;
+      --surface: rgba(255, 255, 255, 0.84);
+      --surface-strong: #ffffff;
+      --text: #0f172a;
+      --muted: #526072;
+      --line: rgba(15, 23, 42, 0.08);
+      --accent: #9cc8ff;
+      --accent-2: #dbeafe;
+      --deep: #0f172a;
+      --deep-2: #162235;
       --radius-xl: 34px;
       --radius-lg: 26px;
       --radius-md: 18px;
+      --shadow: 0 22px 70px rgba(15, 23, 42, 0.08);
+      --shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.05);
       --max: 1180px;
     }
 
@@ -34,9 +37,8 @@
       font-family: Inter, Arial, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 12% 15%, rgba(147, 197, 253, 0.35), transparent 24%),
-        radial-gradient(circle at 88% 14%, rgba(186, 230, 253, 0.28), transparent 22%),
-        radial-gradient(circle at 78% 82%, rgba(191, 219, 254, 0.28), transparent 20%),
+        radial-gradient(circle at 10% 20%, rgba(156, 200, 255, 0.28), transparent 24%),
+        radial-gradient(circle at 85% 10%, rgba(219, 234, 254, 0.55), transparent 22%),
         linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
       line-height: 1.65;
       overflow-x: hidden;
@@ -46,25 +48,27 @@
     body::after {
       content: "";
       position: fixed;
-      width: 340px;
-      height: 340px;
       border-radius: 50%;
-      filter: blur(90px);
-      opacity: 0.35;
+      filter: blur(80px);
+      opacity: 0.34;
       z-index: -1;
       pointer-events: none;
     }
 
     body::before {
-      top: -120px;
+      width: 300px;
+      height: 300px;
       right: -80px;
-      background: rgba(96, 165, 250, 0.32);
+      top: -80px;
+      background: rgba(147, 197, 253, 0.35);
     }
 
     body::after {
-      bottom: -120px;
-      left: -120px;
-      background: rgba(186, 230, 253, 0.38);
+      width: 280px;
+      height: 280px;
+      left: -80px;
+      bottom: -60px;
+      background: rgba(191, 219, 254, 0.42);
     }
 
     .container {
@@ -76,25 +80,25 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      background: rgba(255, 255, 255, 0.76);
       backdrop-filter: blur(16px);
-      background: rgba(255, 255, 255, 0.7);
-      border-bottom: 1px solid rgba(17, 24, 39, 0.06);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
     }
 
     .nav-wrap {
+      min-height: 80px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
-      min-height: 78px;
+      gap: 16px;
     }
 
     .brand {
+      text-decoration: none;
+      color: var(--text);
       font-size: 1rem;
       font-weight: 800;
       letter-spacing: 0.04em;
-      text-decoration: none;
-      color: var(--text);
     }
 
     nav ul {
@@ -102,24 +106,21 @@
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      justify-content: flex-end;
     }
 
     nav a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 16px;
-      border-radius: 999px;
       text-decoration: none;
       color: var(--text);
-      font-weight: 600;
+      font-weight: 700;
+      padding: 10px 16px;
+      border-radius: 999px;
       transition: 0.25s ease;
     }
 
-    nav a:hover {
-      background: rgba(147, 197, 253, 0.22);
-      color: var(--accent-deep);
+    nav a:hover,
+    nav a.active {
+      background: rgba(156, 200, 255, 0.24);
+      color: #1d4ed8;
     }
 
     section {
@@ -127,53 +128,74 @@
     }
 
     .hero {
-      padding-top: 54px;
-      padding-bottom: 24px;
+      padding-top: 46px;
+      padding-bottom: 18px;
     }
 
     .hero-card {
       position: relative;
       overflow: hidden;
       display: grid;
-      grid-template-columns: 1.25fr 0.95fr;
-      gap: 26px;
-      padding: 34px;
-      background: var(--card);
-      border: 1px solid rgba(255, 255, 255, 0.65);
-      box-shadow: var(--shadow);
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 24px;
+      padding: 28px;
       border-radius: 42px;
-      backdrop-filter: blur(18px);
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(22, 34, 53, 0.92));
+      box-shadow: 0 28px 90px rgba(15, 23, 42, 0.18);
+      color: white;
     }
 
     .hero-card::before {
       content: "";
       position: absolute;
-      inset: auto -80px -120px auto;
+      inset: auto auto -140px -120px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(156, 200, 255, 0.22), rgba(156, 200, 255, 0));
+      pointer-events: none;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: -60px -30px auto auto;
       width: 260px;
       height: 260px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(147, 197, 253, 0.45), rgba(147, 197, 253, 0));
+      background: radial-gradient(circle, rgba(219, 234, 254, 0.18), rgba(219, 234, 254, 0));
       pointer-events: none;
+    }
+
+    .hero-left {
+      position: relative;
+      z-index: 1;
+      padding: 8px 6px 8px 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      width: fit-content;
       padding: 10px 14px;
-      background: rgba(147, 197, 253, 0.18);
-      color: var(--accent-deep);
       border-radius: 999px;
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.14);
       font-size: 0.92rem;
       font-weight: 700;
+      color: #dbeafe;
       margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-size: clamp(2.7rem, 7vw, 5.5rem);
+      font-size: clamp(2.8rem, 7vw, 5.4rem);
       line-height: 0.94;
       letter-spacing: -0.05em;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .hero h1 span {
@@ -181,22 +203,9 @@
     }
 
     .hero-subtitle {
-      max-width: 680px;
       font-size: 1.08rem;
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
-
-    .quote {
-      font-size: 0.98rem;
-      color: var(--text);
-      font-weight: 700;
-      padding: 14px 18px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, rgba(147, 197, 253, 0.18), rgba(255,255,255,0.75));
-      border: 1px solid rgba(17, 24, 39, 0.06);
-      width: fit-content;
-      max-width: 100%;
+      color: rgba(255,255,255,0.78);
+      max-width: 620px;
       margin-bottom: 24px;
     }
 
@@ -212,95 +221,73 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
+      text-decoration: none;
+      font-weight: 800;
       padding: 14px 22px;
       border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
       transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
       border: 1px solid transparent;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent-strong), var(--accent-deep));
-      color: white;
-      box-shadow: 0 16px 30px rgba(37, 99, 235, 0.18);
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,0.72);
-      color: var(--text);
-      border-color: rgba(17, 24, 39, 0.08);
     }
 
     .btn:hover {
       transform: translateY(-2px);
     }
 
+    .btn-primary {
+      background: linear-gradient(135deg, #93c5fd, #60a5fa);
+      color: #0f172a;
+      box-shadow: 0 16px 36px rgba(96, 165, 250, 0.22);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      border-color: rgba(255,255,255,0.12);
+    }
+
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 14px;
     }
 
     .meta-pill {
       padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(17, 24, 39, 0.08);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.84);
       font-size: 0.94rem;
-      color: var(--muted);
     }
 
-    .hero-side {
-      display: grid;
-      gap: 16px;
-      align-content: start;
-    }
-
-    .panel {
-      background: rgba(255,255,255,0.68);
-      border: 1px solid rgba(17, 24, 39, 0.08);
-      border-radius: 28px;
-      padding: 22px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
-    }
-
-    .panel-title {
+    .hero-right {
+      position: relative;
+      z-index: 1;
       display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.95rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
+      align-items: stretch;
+      justify-content: center;
     }
 
-    .contact-list, .mini-list {
-      display: grid;
-      gap: 12px;
+    .photo-frame {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 34px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 22px 50px rgba(0,0,0,0.22);
+      padding: 10px;
+      align-self: center;
     }
 
-    .contact-item, .mini-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      color: var(--muted);
-    }
-
-    .icon {
-      width: 40px;
-      height: 40px;
-      min-width: 40px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, rgba(147, 197, 253, 0.3), rgba(255,255,255,0.9));
-      color: var(--accent-deep);
-      font-weight: 800;
-      border: 1px solid rgba(17, 24, 39, 0.06);
+    .photo-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 26px;
+      min-height: 540px;
+      background: #0f172a;
     }
 
     .section-head {
@@ -310,40 +297,50 @@
       margin-bottom: 16px;
     }
 
-    .section-head .section-icon {
+    .section-icon {
       width: 48px;
       height: 48px;
       border-radius: 16px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, rgba(147, 197, 253, 0.25), rgba(255,255,255,0.95));
-      border: 1px solid rgba(17, 24, 39, 0.08);
+      background: linear-gradient(135deg, rgba(156, 200, 255, 0.24), rgba(255,255,255,0.95));
+      border: 1px solid rgba(15, 23, 42, 0.08);
       font-size: 1.2rem;
+      box-shadow: var(--shadow-soft);
     }
 
     .section-head h2 {
-      font-size: clamp(1.75rem, 4vw, 2.45rem);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
       letter-spacing: -0.04em;
     }
 
-    .section-head p {
-      color: var(--muted);
-      margin-top: 2px;
-    }
-
-    .about-grid {
+    .about-grid,
+    .contact-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 22px;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 20px;
     }
 
-    .about-card, .skills-card, .project-card, .contact-card, .form-card {
-      background: var(--card);
-      border: 1px solid rgba(255,255,255,0.65);
+    .card,
+    .skills-card,
+    .project-card,
+    .contact-card,
+    .form-card {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.7);
       border-radius: var(--radius-xl);
       padding: 26px;
       box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
+      backdrop-filter: blur(16px);
+    }
+
+    .card:hover,
+    .skills-card:hover,
+    .project-card:hover,
+    .contact-card:hover,
+    .form-card:hover {
+      transform: translateY(-3px);
+      transition: transform 0.25s ease;
     }
 
     .about-text {
@@ -360,41 +357,35 @@
       gap: 12px;
     }
 
-    .fact {
+    .fact,
+    .skill-item,
+    .contact-item {
       display: flex;
-      gap: 12px;
       align-items: flex-start;
-      padding: 14px;
+      gap: 14px;
+      padding: 15px;
+      border-radius: 20px;
       background: rgba(255,255,255,0.72);
-      border-radius: 18px;
-      border: 1px solid rgba(17, 24, 39, 0.07);
-      color: var(--muted);
+      border: 1px solid rgba(15, 23, 42, 0.07);
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(156, 200, 255, 0.34), rgba(255,255,255,0.96));
+      color: #1d4ed8;
+      font-weight: 800;
+      border: 1px solid rgba(15, 23, 42, 0.06);
     }
 
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
-    }
-
-    .skill-item {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      padding: 18px;
-      background: rgba(255,255,255,0.72);
-      border-radius: 22px;
-      border: 1px solid rgba(17, 24, 39, 0.06);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .skill-item:hover,
-    .project-card:hover,
-    .about-card:hover,
-    .skills-card:hover,
-    .contact-card:hover,
-    .form-card:hover {
-      transform: translateY(-4px);
     }
 
     .skill-item h3,
@@ -407,7 +398,8 @@
     .project-card p,
     .project-card li,
     .contact-card p,
-    .form-card p {
+    .form-card p,
+    .fact {
       color: var(--muted);
     }
 
@@ -417,20 +409,15 @@
       gap: 18px;
     }
 
-    .project-card {
-      position: relative;
-      overflow: hidden;
-    }
-
     .project-tag {
       display: inline-flex;
       padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(147, 197, 253, 0.18);
-      color: var(--accent-deep);
-      font-weight: 700;
+      background: rgba(156, 200, 255, 0.22);
+      color: #1d4ed8;
       font-size: 0.84rem;
-      margin-bottom: 16px;
+      font-weight: 800;
+      margin-bottom: 14px;
     }
 
     .project-card ul {
@@ -442,10 +429,10 @@
       margin-top: 6px;
     }
 
-    .contact-grid {
+    .contact-list {
       display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 20px;
+      gap: 12px;
+      margin-top: 18px;
     }
 
     .social-links {
@@ -460,28 +447,28 @@
       color: var(--text);
       font-weight: 700;
       background: rgba(255,255,255,0.8);
-      border: 1px solid rgba(17, 24, 39, 0.08);
+      border: 1px solid rgba(15, 23, 42, 0.08);
       padding: 12px 16px;
       border-radius: 16px;
       transition: 0.25s ease;
     }
 
     .social-links a:hover {
-      background: rgba(147, 197, 253, 0.18);
-      color: var(--accent-deep);
+      background: rgba(156, 200, 255, 0.18);
+      color: #1d4ed8;
     }
 
     form {
       display: grid;
       gap: 14px;
-      margin-top: 8px;
+      margin-top: 10px;
     }
 
     label {
+      display: inline-block;
       font-size: 0.95rem;
       font-weight: 700;
       margin-bottom: 6px;
-      display: inline-block;
     }
 
     input,
@@ -489,8 +476,8 @@
       width: 100%;
       padding: 15px 16px;
       border-radius: 18px;
-      border: 1px solid rgba(17, 24, 39, 0.10);
-      background: rgba(255,255,255,0.85);
+      border: 1px solid rgba(15, 23, 42, 0.10);
+      background: rgba(255,255,255,0.88);
       font: inherit;
       color: var(--text);
       outline: none;
@@ -499,7 +486,7 @@
 
     input:focus,
     textarea:focus {
-      border-color: rgba(96, 165, 250, 0.7);
+      border-color: rgba(96, 165, 250, 0.72);
       box-shadow: 0 0 0 4px rgba(147, 197, 253, 0.18);
     }
 
@@ -509,22 +496,21 @@
     }
 
     footer {
-      padding: 24px 0 42px;
+      padding: 24px 0 40px;
     }
 
     .footer-card {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 12px;
       padding: 18px 22px;
       border-radius: 24px;
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(17, 24, 39, 0.08);
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(15, 23, 42, 0.08);
       color: var(--muted);
+      box-shadow: var(--shadow-soft);
     }
-
-    
 
     @media (max-width: 1080px) {
       .hero-card,
@@ -537,6 +523,14 @@
       .skills-grid {
         grid-template-columns: 1fr 1fr;
       }
+
+      .photo-frame {
+        max-width: 520px;
+      }
+
+      .photo-frame img {
+        min-height: 420px;
+      }
     }
 
     @media (max-width: 760px) {
@@ -547,7 +541,7 @@
       }
 
       .hero-card,
-      .about-card,
+      .card,
       .skills-card,
       .project-card,
       .contact-card,
@@ -557,7 +551,7 @@
       }
 
       .hero h1 {
-        font-size: 2.8rem;
+        font-size: 2.7rem;
       }
 
       .hero-actions,
@@ -575,6 +569,10 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
+      .photo-frame img {
+        min-height: 360px;
+      }
     }
   </style>
 </head>
@@ -584,7 +582,7 @@
       <a href="#start" class="brand">DOMINIK STANKIEWICZ</a>
       <nav>
         <ul>
-          <li><a href="#start">Start</a></li>
+          <li><a href="#start" class="active">Start</a></li>
           <li><a href="#o-mnie">O mnie</a></li>
           <li><a href="#projekty">Projekty</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
@@ -596,15 +594,15 @@
   <main>
     <section class="hero" id="start">
       <div class="container">
-        <div class="$1$2">
-          <div>
+        <div class="hero-card">
+          <div class="hero-left">
             <div class="hero-badge">● nowoczesna wizytówka online</div>
             <h1><span>Dominik</span><span>Stankiewicz</span></h1>
             <p class="hero-subtitle">
-              Student dziennikarstwa i komunikacji społecznej, osoba zorganizowana, kreatywna i dobrze odnajdująca się w dynamicznym środowisku. Łączę estetykę, komunikację i praktyczne podejście do działania.
+              Student dziennikarstwa i komunikacji społecznej, osoba zorganizowana, kreatywna i dobrze odnajdująca się w dynamicznym środowisku. Łączę komunikację, estetykę i praktyczne podejście do działania.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#kontakt">✉ Napisz do mnie</a>
+              <a class="btn btn-primary" href="mailto:dominikstankiewicz42@gmail.com">✉ Napisz do mnie</a>
               <a class="btn btn-secondary" href="#projekty">↓ Zobacz więcej</a>
             </div>
             <div class="hero-meta">
@@ -614,36 +612,9 @@
             </div>
           </div>
 
-          <div class="hero-side">
-            <div class="panel">
-              <div class="panel-title">📬 Kontakt</div>
-              <div class="contact-list">
-                <div class="contact-item">
-                  <div class="icon">@</div>
-                  <div>
-                    <strong>Email</strong><br />
-                    dominikstankiewicz42@gmail.com
-                  </div>
-                </div>
-                <div class="contact-item">
-                  <div class="icon">☎</div>
-                  <div>
-                    <strong>Telefon</strong><br />
-                    +48 884 843 444
-                  </div>
-                </div>
-                <div class="contact-item">
-                  <div class="icon">⌘</div>
-                  <div>
-                    <strong>Profil GitHub</strong><br />
-                    dstankiewicz4-design
-                  </div>
-                </div>
-              </div>
-            </div>
-                <div class="mini-item"><div class="icon">02</div><div>Zainteresowanie analizą zjawisk w sieci oraz produkcją muzyczną.</div></div>
-                <div class="mini-item"><div class="icon">03</div><div>Naturalne nastawienie na działanie, samodzielność i szukanie rozwiązań.</div></div>
-              </div>
+          <div class="hero-right">
+            <div class="photo-frame">
+              <img src="zdjecie do cv 1.jpeg" alt="Dominik Stankiewicz" />
             </div>
           </div>
         </div>
@@ -652,7 +623,7 @@
 
     <section id="o-mnie">
       <div class="container">
-        <div class="$1$2">
+        <div class="section-head">
           <div class="section-icon">👋</div>
           <div>
             <h2>O mnie</h2>
@@ -660,21 +631,21 @@
         </div>
 
         <div class="about-grid">
-          <div class="$1$2">
+          <div class="card">
             <div class="about-text">
               <p>
-                Jestem osobą wszechstronną, dobrze odnajdującą się zarówno w pracy operacyjnej, jak i biurowej. Na co dzień cenię organizację zadań, samodzielność oraz skuteczne rozwiązywanie problemów.
+                Jestem osobą wszechstronną, dobrze odnajdującą się zarówno w pracy operacyjnej, jak i biurowej. Cenię organizację, samodzielność oraz skuteczne rozwiązywanie problemów.
               </p>
               <p>
-                Lubię działać dynamicznie, podejmować decyzje i brać odpowiedzialność za efekt końcowy. Dobrze czuję się tam, gdzie liczy się elastyczność, konkret i szukanie praktycznych rozwiązań.
+                Lubię działać dynamicznie, brać odpowiedzialność za efekt końcowy i szukać praktycznych rozwiązań. Dobrze czuję się w środowisku, w którym liczy się elastyczność, konkret i dobra komunikacja.
               </p>
               <p>
-                Interesuję się analizą zjawisk w sieci, komunikacją, estetyką internetu oraz produkcją muzyczną. Łączę bardziej uporządkowane podejście z kreatywnym myśleniem i lubię projekty, które mają charakter nowoczesny, ale nieprzekombinowany.
+                Interesuję się analizą zjawisk w sieci, komunikacją, estetyką internetu oraz produkcją muzyczną. Lubię projekty nowoczesne, ale przejrzyste i dobrze poukładane.
               </p>
             </div>
           </div>
 
-          <div class="$1$2">
+          <div class="card">
             <div class="quick-facts">
               <div class="fact">
                 <div class="icon">🎓</div>
@@ -686,7 +657,7 @@
               </div>
               <div class="fact">
                 <div class="icon">🌐</div>
-                <div><strong>Zainteresowania</strong><br />Analiza zjawisk w sieci, projekty kreatywne, tekst, muzyka i estetyka cyfrowa.</div>
+                <div><strong>Zainteresowania</strong><br />Analiza zjawisk w sieci, projekty kreatywne, muzyka i estetyka cyfrowa.</div>
               </div>
             </div>
           </div>
@@ -696,14 +667,14 @@
 
     <section>
       <div class="container">
-        <div class="$1$2">
+        <div class="section-head">
           <div class="section-icon">🛠</div>
           <div>
             <h2>Umiejętności</h2>
           </div>
         </div>
 
-        <div class="$1$2">
+        <div class="skills-card">
           <div class="skills-grid">
             <div class="skill-item">
               <div class="icon">✍</div>
@@ -754,7 +725,7 @@
 
     <section id="projekty">
       <div class="container">
-        <div class="$1$2">
+        <div class="section-head">
           <div class="section-icon">📁</div>
           <div>
             <h2>Projekty i doświadczenie</h2>
@@ -762,7 +733,7 @@
         </div>
 
         <div class="projects-grid">
-          <article class="$1$2">
+          <article class="project-card">
             <div class="project-tag">Doświadczenie</div>
             <h3>EVORENT sp. z o.o. — Wrocław</h3>
             <p>Koordynacja działań operacyjnych i wsparcie bieżącej obsługi firmy.</p>
@@ -774,7 +745,7 @@
             </ul>
           </article>
 
-          <article class="$1$2">
+          <article class="project-card">
             <div class="project-tag">Doświadczenie</div>
             <h3>@KOM — Warszawa</h3>
             <p>Sprzedaż, doradztwo i kontakt z klientem w środowisku handlowym.</p>
@@ -786,13 +757,13 @@
             </ul>
           </article>
 
-          <article class="$1$2">
+          <article class="project-card">
             <div class="project-tag">Projekt</div>
             <h3>Strona personalna</h3>
             <p>Nowoczesna wizytówka online przygotowana jako projekt na zajęcia akademickie.</p>
             <ul>
               <li>przejrzysty układ typu one-page,</li>
-              <li>jasna kolorystyka z niebieskimi akcentami,</li>
+              <li>spójna kolorystyka i czytelna struktura,</li>
               <li>nacisk na estetykę, prostotę i nowoczesny styl.</li>
             </ul>
           </article>
@@ -802,7 +773,7 @@
 
     <section id="kontakt">
       <div class="container">
-        <div class="$1$2">
+        <div class="section-head">
           <div class="section-icon">✉</div>
           <div>
             <h2>Kontakt</h2>
@@ -810,11 +781,11 @@
         </div>
 
         <div class="contact-grid">
-          <div class="$1$2">
+          <div class="contact-card">
             <p>
               Jeśli chcesz się ze mną skontaktować, najlepiej napisz wiadomość mailową albo odezwij się przez profil zawodowy. Poniżej zostawiam najważniejsze dane kontaktowe.
             </p>
-            <div class="contact-list" style="margin-top: 18px;">
+            <div class="contact-list">
               <div class="contact-item">
                 <div class="icon">@</div>
                 <div>
@@ -852,7 +823,7 @@
             </div>
           </div>
 
-          <div class="$1$2">
+          <div class="form-card">
             <p>Napisz wiadomość — po kliknięciu przycisku otworzy się Twój program pocztowy z gotową treścią.</p>
             <form id="contactForm">
               <div>
@@ -893,13 +864,9 @@
 
       const subject = encodeURIComponent('Wiadomość ze strony personalnej');
       const body = encodeURIComponent(
-        'Imię: ' + name + '
-' +
-        'Email: ' + email + '
-
-' +
-        'Wiadomość:
-' + message
+        'Imię: ' + name + '\n' +
+        'Email: ' + email + '\n\n' +
+        'Wiadomość:\n' + message
       );
 
       window.location.href = 'mailto:dominikstankiewicz42@gmail.com?subject=' + subject + '&body=' + body;
