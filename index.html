@@ -8,19 +8,14 @@
   <style>
     :root {
       --bg: #f7f9fc;
-      --bg-soft: #eef4fb;
       --surface: rgba(255, 255, 255, 0.84);
-      --surface-strong: #ffffff;
       --text: #0f172a;
       --muted: #526072;
-      --line: rgba(15, 23, 42, 0.08);
       --accent: #9cc8ff;
-      --accent-2: #dbeafe;
       --deep: #0f172a;
       --deep-2: #162235;
       --radius-xl: 34px;
       --radius-lg: 26px;
-      --radius-md: 18px;
       --shadow: 0 22px 70px rgba(15, 23, 42, 0.08);
       --shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.05);
       --max: 1180px;
@@ -39,7 +34,7 @@
       background:
         radial-gradient(circle at 10% 20%, rgba(156, 200, 255, 0.28), transparent 24%),
         radial-gradient(circle at 85% 10%, rgba(219, 234, 254, 0.55), transparent 22%),
-        linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+        linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
       line-height: 1.65;
       overflow-x: hidden;
     }
@@ -227,6 +222,7 @@
       border-radius: 999px;
       transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
       border: 1px solid transparent;
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -405,7 +401,7 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
     }
 
@@ -567,7 +563,7 @@
 
       .footer-card {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
       }
 
       .photo-frame img {
@@ -584,7 +580,7 @@
         <ul>
           <li><a href="#start" class="active">Start</a></li>
           <li><a href="#o-mnie">O mnie</a></li>
-          <li><a href="#projekty">Projekty</a></li>
+          <li><a href="#projekty">Doświadczenie</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
@@ -614,7 +610,7 @@
 
           <div class="hero-right">
             <div class="photo-frame">
-              <img src="profile-photo.jpg" alt="Dominik Stankiewicz" />
+              <img src="zdjecie do cv 1.jpeg" alt="Dominik Stankiewicz" />
             </div>
           </div>
         </div>
@@ -665,12 +661,12 @@
       </div>
     </section>
 
-    <section>
+    <section id="kompetencje">
       <div class="container">
         <div class="section-head">
           <div class="section-icon">🛠</div>
           <div>
-            <h2>Umiejętności</h2>
+            <h2>Kompetencje</h2>
           </div>
         </div>
 
@@ -679,43 +675,64 @@
             <div class="skill-item">
               <div class="icon">✍</div>
               <div>
-                <h3>Komunikacja</h3>
-                <p>Sprawne przekazywanie informacji, kontakt z klientem i dobra organizacja przepływu spraw.</p>
+                <h3>Storytelling i tworzenie treści</h3>
+                <p>Budowanie czytelnych komunikatów, tworzenie tekstów i porządkowanie przekazu pod odbiorcę oraz medium.</p>
               </div>
             </div>
+
+            <div class="skill-item">
+              <div class="icon">🌐</div>
+              <div>
+                <h3>Komunikacja medialna</h3>
+                <p>Rozumienie zasad komunikacji w mediach cyfrowych, analizy przekazu i dopasowania treści do kontekstu online.</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="icon">🎨</div>
+              <div>
+                <h3>Graphic design</h3>
+                <p>Estetyczne myślenie wizualne, praca na materiałach graficznych oraz wyczucie prostego i nowoczesnego layoutu.</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="icon">🤖</div>
+              <div>
+                <h3>AI generative thinking</h3>
+                <p>Praktyczne wykorzystywanie narzędzi AI do generowania pomysłów, rozwijania koncepcji i przyspieszania pracy kreatywnej.</p>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="icon">🔎</div>
+              <div>
+                <h3>Research i selekcja informacji</h3>
+                <p>Wyszukiwanie, porządkowanie i ocena informacji potrzebnych do przygotowania materiałów oraz pracy projektowej.</p>
+              </div>
+            </div>
+
             <div class="skill-item">
               <div class="icon">⚙</div>
               <div>
                 <h3>Organizacja pracy</h3>
-                <p>Planowanie zadań, samodzielność, odpowiedzialność i działanie w dynamicznym środowisku.</p>
+                <p>Samodzielność, odpowiedzialność i sprawne działanie w środowisku, w którym liczy się terminowość i dobra koordynacja zadań.</p>
               </div>
             </div>
-            <div class="skill-item">
-              <div class="icon">🎨</div>
-              <div>
-                <h3>Kreatywność</h3>
-                <p>Tworzenie pomysłów, szukanie rozwiązań i estetyczne podejście do projektów.</p>
-              </div>
-            </div>
+
             <div class="skill-item">
               <div class="icon">💼</div>
               <div>
-                <h3>Praca biurowa</h3>
-                <p>Dokumentacja, fakturowanie, obsługa klienta i łączenie obowiązków operacyjnych z administracyjnymi.</p>
+                <h3>Obsługa dokumentacji i klienta</h3>
+                <p>Łączenie obowiązków administracyjnych, organizacyjnych i komunikacyjnych w codziennej pracy operacyjnej.</p>
               </div>
             </div>
+
             <div class="skill-item">
               <div class="icon">🖥</div>
               <div>
-                <h3>Narzędzia</h3>
-                <p>Microsoft Office, Adobe Photoshop, Adobe Premiere Pro oraz swobodne poruszanie się w środowisku online.</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="icon">🚗</div>
-              <div>
-                <h3>Praktyczne kompetencje</h3>
-                <p>Organizacja floty pojazdów, przygotowanie aut, obsługa klienta i prawo jazdy kat. B.</p>
+                <h3>Narzędzia cyfrowe</h3>
+                <p>Microsoft Office, Adobe Photoshop, Adobe Premiere Pro oraz swobodne poruszanie się w środowisku online i projektowym.</p>
               </div>
             </div>
           </div>
@@ -728,7 +745,7 @@
         <div class="section-head">
           <div class="section-icon">📁</div>
           <div>
-            <h2>Projekty i doświadczenie</h2>
+            <h2>Doświadczenie</h2>
           </div>
         </div>
 
@@ -738,10 +755,10 @@
             <h3>EVORENT sp. z o.o. — Wrocław</h3>
             <p>Koordynacja działań operacyjnych, organizacyjnych oraz obsługa bieżących procesów firmy.</p>
             <ul>
-              <li>obsługa dokumentacji oraz spraw bieżących,</li>
-              <li>kontakt z klientem oraz towarzystwami ubezpieczeniowymi,</li>
+              <li>obsługa dokumentacji oraz procesów bieżących,</li>
+              <li>obsługa klienta oraz kontakt z partnerami zewnętrznymi,</li>
               <li>przygotowanie pojazdów do wydania,</li>
-              <li>łączenie obowiązków biurowych z organizacyjnymi.</li>
+              <li>łączenie zadań administracyjnych z organizacją pracy operacyjnej.</li>
             </ul>
           </article>
 
@@ -756,9 +773,6 @@
               <li>dbałość o wysoki standard obsługi.</li>
             </ul>
           </article>
-
-          <article class="project-card">
-            
         </div>
       </div>
     </section>
@@ -774,7 +788,6 @@
 
         <div class="contact-grid">
           <div class="contact-card">
-            
             <div class="contact-list">
               <div class="contact-item">
                 <div class="icon">@</div>
@@ -783,6 +796,7 @@
                   dominikstankiewicz42@gmail.com
                 </div>
               </div>
+
               <div class="contact-item">
                 <div class="icon">☎</div>
                 <div>
@@ -790,6 +804,7 @@
                   +48 884 843 444
                 </div>
               </div>
+
               <div class="contact-item">
                 <div class="icon">⌘</div>
                 <div>
@@ -797,6 +812,7 @@
                   github.com/dstankiewicz4-design
                 </div>
               </div>
+
               <div class="contact-item">
                 <div class="icon">in</div>
                 <div>
@@ -814,7 +830,6 @@
           </div>
 
           <div class="form-card">
-            
             <form id="contactForm">
               <div>
                 <label for="name">Imię</label>
@@ -828,7 +843,7 @@
                 <label for="message">Wiadomość</label>
                 <textarea id="message" name="message" placeholder="Napisz wiadomość..." required></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Wyślij przez email</button>
+              <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
             </form>
           </div>
         </div>
@@ -853,13 +868,9 @@
 
       const subject = encodeURIComponent('Wiadomość ze strony personalnej');
       const body = encodeURIComponent(
-        'Imię: ' + name + '
-' +
-        'Email: ' + email + '
-
-' +
-        'Wiadomość:
-' + message
+        'Imię: ' + name + '\n' +
+        'Email: ' + email + '\n\n' +
+        'Wiadomość:\n' + message
       );
 
       window.location.href = 'mailto:dominikstankiewicz42@gmail.com?subject=' + subject + '&body=' + body;
