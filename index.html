@@ -295,13 +295,6 @@
       letter-spacing: -0.04em;
     }
 
-    .about-grid,
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 20px;
-    }
-
     .card,
     .skills-card,
     .project-card,
@@ -333,14 +326,15 @@
       margin-top: 14px;
     }
 
-    .quick-facts {
+    .skills-grid {
       display: grid;
-      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
     }
 
-    .fact,
     .skill-item,
-    .contact-item {
+    .contact-item,
+    .edu-item {
       display: flex;
       align-items: flex-start;
       gap: 14px;
@@ -363,14 +357,9 @@
       border: 1px solid rgba(15, 23, 42, 0.06);
     }
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
     .skill-item h3,
-    .project-card h3 {
+    .project-card h3,
+    .edu-item h3 {
       font-size: 1.05rem;
       margin-bottom: 4px;
     }
@@ -380,7 +369,9 @@
     .project-card li,
     .contact-card p,
     .form-card p,
-    .fact {
+    .edu-item p,
+    .edu-item li,
+    .about-text {
       color: var(--muted);
     }
 
@@ -407,13 +398,26 @@
       margin-bottom: 8px;
     }
 
-    .project-card ul {
+    .project-card ul,
+    .edu-item ul {
       padding-left: 18px;
       margin-top: 10px;
     }
 
-    .project-card li + li {
+    .project-card li + li,
+    .edu-item li + li {
       margin-top: 6px;
+    }
+
+    .education-wrap {
+      display: grid;
+      gap: 18px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 20px;
     }
 
     .contact-list {
@@ -501,9 +505,8 @@
 
     @media (max-width: 1080px) {
       .hero-card,
-      .about-grid,
-      .contact-grid,
-      .projects-grid {
+      .projects-grid,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
@@ -572,6 +575,7 @@
           <li><a href="#start" class="active">Start</a></li>
           <li><a href="#o-mnie">O mnie</a></li>
           <li><a href="#projekty">Doświadczenie</a></li>
+          <li><a href="#edukacja">Edukacja</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
@@ -616,31 +620,20 @@
           </div>
         </div>
 
-        <div class="about-grid">
-          <div class="card">
-            <div class="about-text">
-              <p>
-                Jestem osobą wszechstronną, dobrze odnajdującą się zarówno w pracy operacyjnej, jak i biurowej. Cenię organizację, samodzielność oraz skuteczne rozwiązywanie problemów, a w codziennym działaniu stawiam na konkret, odpowiedzialność i dobrą komunikację.
-              </p>
-              <p>
-                Lubię działać dynamicznie, brać odpowiedzialność za efekt końcowy i szukać praktycznych rozwiązań. Dobrze czuję się w środowisku, w którym liczy się elastyczność, umiejętność szybkiego reagowania oraz sprawne łączenie zadań organizacyjnych z komunikacyjnymi.
-              </p>
-              <p>
-                Studiuję dziennikarstwo i komunikację społeczną, dzięki czemu rozwijam kompetencje związane z tworzeniem treści, analizą przekazu, komunikacją wizerunkową oraz pracą z mediami cyfrowymi. Interesuje mnie to, w jaki sposób buduje się przekaz, jak projektuje się komunikację i jak łączy się estetykę z funkcjonalnością.
-              </p>
-              <p>
-                Interesuję się analizą zjawisk w sieci, komunikacją, estetyką internetu oraz produkcją muzyczną. Lubię projekty nowoczesne, ale przejrzyste i dobrze poukładane — takie, które nie tylko dobrze wyglądają, ale też mają sens, są czytelne i realizują konkretny cel.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="quick-facts">
-              <div class="fact">
-                <div class="icon">🎓</div>
-                <div><strong>Edukacja</strong><br />Dziennikarstwo i komunikacja społeczna, SWPS we Wrocławiu — specjalizacja PR i Branding.</div>
-              </div>
-            </div>
+        <div class="card">
+          <div class="about-text">
+            <p>
+              Jestem osobą wszechstronną, dobrze odnajdującą się zarówno w pracy operacyjnej, jak i biurowej. Cenię organizację, samodzielność oraz skuteczne rozwiązywanie problemów, a w codziennym działaniu stawiam na konkret, odpowiedzialność i dobrą komunikację.
+            </p>
+            <p>
+              Lubię działać dynamicznie, brać odpowiedzialność za efekt końcowy i szukać praktycznych rozwiązań. Dobrze czuję się w środowisku, w którym liczy się elastyczność, umiejętność szybkiego reagowania oraz sprawne łączenie zadań organizacyjnych z komunikacyjnymi.
+            </p>
+            <p>
+              Studiuję dziennikarstwo i komunikację społeczną, dzięki czemu rozwijam kompetencje związane z tworzeniem treści, analizą przekazu, komunikacją wizerunkową oraz pracą z mediami cyfrowymi. Interesuje mnie to, w jaki sposób buduje się przekaz, jak projektuje się komunikację i jak łączy się estetykę z funkcjonalnością.
+            </p>
+            <p>
+              Interesuję się analizą zjawisk w sieci, komunikacją, estetyką internetu oraz produkcją muzyczną. Lubię projekty nowoczesne, ale przejrzyste i dobrze poukładane — takie, które nie tylko dobrze wyglądają, ale też mają sens, są czytelne i realizują konkretny cel.
+            </p>
           </div>
         </div>
       </div>
@@ -760,6 +753,36 @@
               <li>dbałość o wysoki standard obsługi.</li>
             </ul>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="edukacja">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-icon">🎓</div>
+          <div>
+            <h2>Edukacja</h2>
+          </div>
+        </div>
+
+        <div class="education-wrap">
+          <div class="card">
+            <div class="edu-item">
+              <div class="icon">🎓</div>
+              <div>
+                <h3>SWPS we Wrocławiu</h3>
+                <p>Dziennikarstwo i komunikacja społeczna — specjalizacja PR i Branding.</p>
+                <ul>
+                  <li>rozwijanie umiejętności tworzenia treści i pracy z przekazem,</li>
+                  <li>poznawanie zasad komunikacji wizerunkowej i medialnej,</li>
+                  <li>analiza mediów cyfrowych oraz zjawisk zachodzących w internecie,</li>
+                  <li>praca nad projektami z obszaru komunikacji, PR i brandingu,</li>
+                  <li>łączenie estetyki przekazu z jego funkcjonalnością i celem komunikacyjnym.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
