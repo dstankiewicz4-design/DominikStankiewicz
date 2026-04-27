@@ -299,8 +299,7 @@
     .card,
     .skills-card,
     .project-card,
-    .contact-card,
-    .form-card {
+    .contact-card {
       background: var(--surface);
       border: 1px solid rgba(255,255,255,0.7);
       border-radius: var(--radius-xl);
@@ -312,8 +311,7 @@
     .card:hover,
     .skills-card:hover,
     .project-card:hover,
-    .contact-card:hover,
-    .form-card:hover {
+    .contact-card:hover {
       transform: translateY(-3px);
       transition: transform 0.25s ease;
     }
@@ -369,7 +367,6 @@
     .project-card p,
     .project-card li,
     .contact-card p,
-    .form-card p,
     .edu-item p,
     .edu-item li,
     .about-text {
@@ -415,16 +412,10 @@
       gap: 18px;
     }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 20px;
-    }
-
     .contact-list {
       display: grid;
       gap: 12px;
-      margin-top: 18px;
+      margin-top: 8px;
     }
 
     .social-links {
@@ -450,43 +441,6 @@
       color: #1d4ed8;
     }
 
-    form {
-      display: grid;
-      gap: 14px;
-      margin-top: 10px;
-    }
-
-    label {
-      display: inline-block;
-      font-size: 0.95rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 15px 16px;
-      border-radius: 18px;
-      border: 1px solid rgba(15, 23, 42, 0.10);
-      background: rgba(255,255,255,0.88);
-      font: inherit;
-      color: var(--text);
-      outline: none;
-      transition: border-color 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    input:focus,
-    textarea:focus {
-      border-color: rgba(96, 165, 250, 0.72);
-      box-shadow: 0 0 0 4px rgba(147, 197, 253, 0.18);
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
     footer {
       padding: 24px 0 40px;
     }
@@ -506,8 +460,7 @@
 
     @media (max-width: 1080px) {
       .hero-card,
-      .projects-grid,
-      .contact-grid {
+      .projects-grid {
         grid-template-columns: 1fr;
       }
 
@@ -535,8 +488,7 @@
       .card,
       .skills-card,
       .project-card,
-      .contact-card,
-      .form-card {
+      .contact-card {
         padding: 22px;
         border-radius: 28px;
       }
@@ -799,65 +751,36 @@
           </div>
         </div>
 
-        <div class="contact-grid">
-          <div class="contact-card">
-            <div class="contact-list">
-              <div class="contact-item">
-                <div class="icon">@</div>
-                <div>
-                  <strong>Email</strong><br />
-                  dominikstankiewicz42@gmail.com
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="icon">☎</div>
-                <div>
-                  <strong>Telefon</strong><br />
-                  +48 884 843 444
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="icon">⌘</div>
-                <div>
-                  <strong>GitHub</strong><br />
-                  github.com/dstankiewicz4-design
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="icon">in</div>
-                <div>
-                  <strong>LinkedIn</strong><br />
-                  linkedin.com/in/dominik-stankiewicz-6984b9192/
-                </div>
+        <div class="contact-card">
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="icon">☎</div>
+              <div>
+                <strong>Telefon</strong><br />
+                +48 884 843 444
               </div>
             </div>
 
-            <div class="social-links">
-              <a href="https://github.com/dstankiewicz4-design" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="https://www.linkedin.com/in/dominik-stankiewicz-6984b9192/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="mailto:dominikstankiewicz42@gmail.com">Email</a>
+            <div class="contact-item">
+              <div class="icon">⌘</div>
+              <div>
+                <strong>GitHub</strong><br />
+                github.com/dstankiewicz4-design
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="icon">in</div>
+              <div>
+                <strong>LinkedIn</strong><br />
+                linkedin.com/in/dominik-stankiewicz-6984b9192/
+              </div>
             </div>
           </div>
 
-          <div class="form-card">
-            <form id="contactForm">
-              <div>
-                <label for="name">Imię</label>
-                <input type="text" id="name" name="name" placeholder="Twoje imię" required />
-              </div>
-              <div>
-                <label for="email">Twój email</label>
-                <input type="email" id="email" name="email" placeholder="twoj@email.com" required />
-              </div>
-              <div>
-                <label for="message">Wiadomość</label>
-                <textarea id="message" name="message" placeholder="Napisz wiadomość..." required></textarea>
-              </div>
-              <button type="submit" class="btn btn-secondary" style="color:#0f172a;background:linear-gradient(135deg,#93c5fd,#60a5fa);border:none;">Wyślij wiadomość</button>
-            </form>
+          <div class="social-links">
+            <a href="https://github.com/dstankiewicz4-design" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/dominik-stankiewicz-6984b9192/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
       </div>
@@ -871,23 +794,5 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-
-      const subject = encodeURIComponent('Wiadomość ze strony personalnej');
-      const body = encodeURIComponent(
-        'Imię: ' + name + '\n' +
-        'Email: ' + email + '\n\n' +
-        'Wiadomość:\n' + message
-      );
-
-      window.location.href = 'mailto:dominikstankiewicz42@gmail.com?subject=' + subject + '&body=' + body;
-    });
-  </script>
 </body>
 </html>
