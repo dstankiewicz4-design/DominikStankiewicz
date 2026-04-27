@@ -185,6 +185,13 @@
     .hero-subtitle {
       font-size: 1.08rem;
       color: rgba(255,255,255,0.78);
+      max-width: 660px;
+      margin-bottom: 16px;
+    }
+
+    .hero-extra {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.72);
       max-width: 620px;
       margin-bottom: 24px;
     }
@@ -212,12 +219,6 @@
 
     .btn:hover {
       transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #93c5fd, #60a5fa);
-      color: #0f172a;
-      box-shadow: 0 16px 36px rgba(96, 165, 250, 0.22);
     }
 
     .btn-secondary {
@@ -591,8 +592,10 @@
             <p class="hero-subtitle">
               Student dziennikarstwa i komunikacji społecznej ze specjalizacją PR i Branding. Interesuję się komunikacją, estetyką cyfrową oraz nowoczesnym podejściem do tworzenia treści i budowania wizerunku.
             </p>
+            <p class="hero-extra">
+              Rozwijam się w obszarze komunikacji cyfrowej, PR i brandingu, łącząc kreatywne myślenie z dobrą organizacją i praktycznym podejściem do działania.
+            </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="mailto:dominikstankiewicz42@gmail.com">✉ Napisz do mnie</a>
               <a class="btn btn-secondary" href="#projekty">↓ Zobacz więcej</a>
             </div>
             <div class="hero-meta">
@@ -654,15 +657,15 @@
               <div class="icon">✍</div>
               <div>
                 <h3>Storytelling i tworzenie treści</h3>
-                <p>Budowanie czytelnych komunikatów, tworzenie tekstów i porządkowanie przekazu pod odbiorcę oraz medium.</p>
+                <p>Tworzenie spójnych komunikatów, porządkowanie przekazu i dopasowywanie treści do odbiorcy oraz medium.</p>
               </div>
             </div>
 
             <div class="skill-item">
               <div class="icon">🌐</div>
               <div>
-                <h3>Komunikacja medialna</h3>
-                <p>Rozumienie zasad komunikacji w mediach cyfrowych, analizy przekazu i dopasowania treści do kontekstu online.</p>
+                <h3>Komunikacja medialna i wizerunkowa</h3>
+                <p>Rozumienie zasad komunikacji w mediach cyfrowych, budowania wizerunku oraz dopasowywania treści do kontekstu marki.</p>
               </div>
             </div>
 
@@ -670,7 +673,7 @@
               <div class="icon">🎨</div>
               <div>
                 <h3>Graphic design</h3>
-                <p>Estetyczne myślenie wizualne, praca na materiałach graficznych oraz wyczucie prostego i nowoczesnego layoutu.</p>
+                <p>Tworzenie prostych materiałów wizualnych i wyczucie estetyki potrzebnej do nowoczesnej, czytelnej komunikacji.</p>
               </div>
             </div>
 
@@ -678,23 +681,23 @@
               <div class="icon">🤖</div>
               <div>
                 <h3>AI generative thinking</h3>
-                <p>Praktyczne wykorzystywanie narzędzi AI do generowania pomysłów, rozwijania koncepcji i przyspieszania pracy kreatywnej.</p>
+                <p>Wykorzystywanie narzędzi AI do rozwijania pomysłów, generowania koncepcji i usprawniania pracy kreatywnej.</p>
               </div>
             </div>
 
             <div class="skill-item">
               <div class="icon">🔎</div>
               <div>
-                <h3>Research i selekcja informacji</h3>
-                <p>Wyszukiwanie, porządkowanie i ocena informacji potrzebnych do przygotowania materiałów oraz pracy projektowej.</p>
+                <h3>Research i analiza informacji</h3>
+                <p>Wyszukiwanie, selekcja i porządkowanie informacji potrzebnych do przygotowania materiałów oraz pracy projektowej.</p>
               </div>
             </div>
 
             <div class="skill-item">
               <div class="icon">⚙</div>
               <div>
-                <h3>Organizacja pracy</h3>
-                <p>Samodzielność, odpowiedzialność i sprawne działanie w środowisku, w którym liczy się terminowość i dobra koordynacja zadań.</p>
+                <h3>Organizacja pracy i koordynacja zadań</h3>
+                <p>Samodzielne działanie, odpowiedzialność i dobra organizacja pracy w środowisku wymagającym terminowości i elastyczności.</p>
               </div>
             </div>
 
@@ -710,7 +713,7 @@
               <div class="icon">🖥</div>
               <div>
                 <h3>Narzędzia cyfrowe</h3>
-                <p>Microsoft Office, Adobe Photoshop, Adobe Premiere Pro oraz swobodne poruszanie się w środowisku online i projektowym.</p>
+                <p>Microsoft Office, Adobe Photoshop, Adobe Premiere Pro oraz sprawne poruszanie się w środowisku online i projektowym.</p>
               </div>
             </div>
           </div>
@@ -732,7 +735,7 @@
             <div class="project-tag">Doświadczenie</div>
             <h3>EVORENT sp. z o.o. — Wrocław</h3>
             <div class="project-date">2023 – obecnie</div>
-            <p>Koordynacja działań operacyjnych, organizacyjnych oraz obsługa bieżących procesów firmy.</p>
+            <p>Koordynacja działań operacyjnych, organizacyjnych oraz obsługa bieżących procesów firmy w dynamicznym środowisku pracy.</p>
             <ul>
               <li>obsługa dokumentacji oraz procesów bieżących,</li>
               <li>obsługa klienta oraz kontakt z partnerami zewnętrznymi,</li>
@@ -749,8 +752,8 @@
             <ul>
               <li>obsługa klienta na wyspie handlowej,</li>
               <li>doradztwo w zakresie telefonów i akcesoriów,</li>
-              <li>doradztwo w doborze urządzeń,</li>
-              <li>dbałość o wysoki standard obsługi.</li>
+              <li>dobór urządzeń do potrzeb klienta,</li>
+              <li>dbałość o profesjonalny standard obsługi.</li>
             </ul>
           </article>
         </div>
@@ -853,7 +856,7 @@
                 <label for="message">Wiadomość</label>
                 <textarea id="message" name="message" placeholder="Napisz wiadomość..." required></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
+              <button type="submit" class="btn btn-secondary" style="color:#0f172a;background:linear-gradient(135deg,#93c5fd,#60a5fa);border:none;">Wyślij wiadomość</button>
             </form>
           </div>
         </div>
